@@ -1,0 +1,96 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F336;
+}
+.pile{
+    background-color: #F5F336;
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+}
+.pile_decharger {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: 35vh;
+    bottom: 35vh;
+    left: 35vw;
+    right: 35vw;
+    color: white;
+    margin: auto;
+}
+.color_path{
+    color: black;
+}
+.fa-battery-full{
+    animation: pile_se_charge 2s 20s linear;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.fa-battery-three-quarters{
+    animation: pile_se_charge 2s  15s linear;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.fa-battery-half{
+    animation: pile_se_charge 2s  10s linear;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.fa-battery-quarter {
+    animation: pile_se_charge 2s  5s linear;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+.fa-battery-empty{
+    animation: pile_se_charge 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pile_se_charge {
+    0%{
+    }
+    50%{
+        color: black;
+        visibility:visible;
+    }
+    100%{
+        opacity: 1;
+        visibility:visible;
+        color: black;
+    }
+}
+
+/* qui se decharge */
+.fa-battery-full1{
+    animation: pile_qui_se_decharge 5s 5s linear;
+    animation-fill-mode: forwards;
+}
+.fa-battery-three-quarters1{
+    animation: pile_qui_se_decharge 2s  10s linear;
+    animation-fill-mode: forwards;
+}
+.fa-battery-half1{
+    animation: pile_qui_se_decharge 2s  15s linear;
+    animation-fill-mode: forwards;
+}
+.fa-battery-quarter1 {
+    animation: pile_qui_se_decharge 2s  20s linear;
+    animation-fill-mode: forwards;
+}
+.fa-battery-empty1{
+    animation: pile_qui_se_decharge 2s linear;
+    color: red;
+}
+@keyframes pile_qui_se_decharge{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
